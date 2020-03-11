@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/',
   siteMetadata: {
     title: "Ibas Majid",
     description: "I teach JavaScript, React, GraphQL and Gatsby",
@@ -14,17 +13,17 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images`,
-        name: 'images',
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: 'images',
       },
     },
     "gatsby-plugin-sharp",
@@ -33,7 +32,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          "gatsby-remark-normalize-paths",
+          "gatsby-remark-relative-images",
           {
             resolve: "gatsby-remark-images",
             options: {
