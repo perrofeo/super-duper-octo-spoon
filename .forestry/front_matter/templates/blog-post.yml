@@ -11,3 +11,5 @@ fields:
 - type: file
   name: featured
   label: featured
+pages:
+- src/posts/test1.md
