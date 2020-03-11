@@ -13,6 +13,13 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: 'images',
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",
@@ -25,6 +32,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          `@forestryio/gatsby-remark-normalize-paths`,
           {
             resolve: "gatsby-remark-images",
             options: {
