@@ -13,5 +13,6 @@ fields:
   label: featured
 pages:
 - src/posts/test-3.md
+- src/posts/test-5.md
 - src/posts/test2.md
 - src/posts/test4.md
