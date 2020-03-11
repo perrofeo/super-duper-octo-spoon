@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: process.env.PATH_PREFIX || '/',
   siteMetadata: {
     title: "Ibas Majid",
     description: "I teach JavaScript, React, GraphQL and Gatsby",
@@ -32,7 +33,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          `@forestryio/gatsby-remark-normalize-paths`,
+          "gatsby-remark-normalize-paths",
           {
             resolve: "gatsby-remark-images",
             options: {
