@@ -1,16 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
 
-const Index = () => {
+const About = () => {
   return (
     <Layout>
       <div>
-        <h1>Home page</h1>
-        <h2>I'm Ibas, a teacher and a Gatsby.js developer</h2>
+        <h1>About Page</h1>
+        <p>Ibas is a web developer, teacher and a creative writer.</p>
       </div>
     </Layout>
     
   )
 }
 
-export default Index
+export default About
