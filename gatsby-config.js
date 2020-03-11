@@ -13,6 +13,13 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static/images`,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",
@@ -25,6 +32,9 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: "gatsby-remark-images",
             options: {
