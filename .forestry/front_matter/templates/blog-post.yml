@@ -12,4 +12,5 @@ fields:
   name: featured
   label: featured
 pages:
+- src/posts/test-3.md
 - src/posts/test2.md
